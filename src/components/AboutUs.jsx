@@ -1,17 +1,9 @@
 import React from 'react';
-import CEO from '/CEO.jpg'
 
 const AboutUs = () => {
   return (
     <>
-    <div className="about-us-container bg-white p-8 rounded-lg  flex flex-col md:flex-row items-center md:items-start">
-      <div className="md:w-1/2 h-fit mb-6 md:mb-0 md:mr-6">
-        <img 
-          src={CEO} 
-          alt="Bliss Bakers" 
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+    <div className="about-us-container bg-white p-8 rounded-lg  flex justify-center md:flex-row items-center md:items-start">
       <div className="md:w-1/2">
         <h1 className="text-4xl font-bold text-center md:text-left mb-6 dancing-script-regular flex justify-center">Our Story</h1>
         <p className="text-lg leading-relaxed text-gray-700 ">
