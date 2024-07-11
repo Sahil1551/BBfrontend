@@ -27,6 +27,8 @@ const Login = ({ a }) => {
       if (err.response.data.msg.toLowerCase()==='user not verified') {
         alert(`${err.response.data.msg} plz verify on registered email`);
       }
+    }finally {
+      event.target.reset(); // Reset form fields
     }
   };
 
@@ -58,6 +60,8 @@ const Login = ({ a }) => {
     } catch (error) {
       console.error('Error registering user:', error);
       // Handle error logic here (e.g., showing an error message)
+    }finally {
+      event.target.reset(); // Reset form fields
     }
   };
 
