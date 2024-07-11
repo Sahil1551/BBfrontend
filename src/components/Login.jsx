@@ -54,7 +54,7 @@ const Login = ({ a }) => {
 
     try {
       const response = await axios.post('https://b-bbackend.vercel.app/user/register', userData);
-      console.log(response);
+      
       alert('Registration successful! Please verify your email to complete the sign-up process.');
       
     } catch (error) {
