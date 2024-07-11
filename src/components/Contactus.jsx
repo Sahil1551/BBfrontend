@@ -12,7 +12,7 @@ const Contactus = () => {
         email,
         query
       }
-      await axios.post('http://localhost:5000/api/postQuery',contactData)
+      await axios.post('https://b-bbackend.vercel.app/api/postQuery',contactData)
       window.location.href='/'
     }
     catch(err){

@@ -21,13 +21,13 @@ const Main = () => {
   const [review,setReview]=useState([]);
   useEffect(() => {
     const fetch = async () => {
-      const responsecake = await axios.get('http://localhost:5000/api/getProduct/668cbc64d38d86d38b46b6e9');
-      const responsecupcake = await axios.get('http://localhost:5000/api/getProduct/668d2edc3b7c0f75f0db2557');
-      const responsecheesecake = await axios.get('http://localhost:5000/api/getProduct/668d2ee53b7c0f75f0db255a');
-      const responsecookie = await axios.get('http://localhost:5000/api/getProduct/668d2ee93b7c0f75f0db255d');
-      const responseDrycake = await axios.get('http://localhost:5000/api/getProduct/668d2ef23b7c0f75f0db2560');
-      //const responsebrownie = await axios.get('http://localhost:5000/api/getProduct/668d2efc3b7c0f75f0db2563');
-      const response= await axios.get('http://localhost:5000/api/getReview');
+      const responsecake = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668cbc64d38d86d38b46b6e9');
+      const responsecupcake = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668d2edc3b7c0f75f0db2557');
+      const responsecheesecake = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668d2ee53b7c0f75f0db255a');
+      const responsecookie = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668d2ee93b7c0f75f0db255d');
+      const responseDrycake = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668d2ef23b7c0f75f0db2560');
+      //const responsebrownie = await axios.get('https://b-bbackend.vercel.app/api/getProduct/668d2efc3b7c0f75f0db2563');
+      const response= await axios.get('https://b-bbackend.vercel.app/api/getReview');
       setReview(response.data);
       setProductcupcake(responsecupcake.data);
       setProductcake(responsecake.data);

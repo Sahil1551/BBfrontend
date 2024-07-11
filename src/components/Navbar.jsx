@@ -17,7 +17,7 @@ export default function App() {
       const fetchUser=async()=>{
         if(accesstoken){
         try{
-          const response=await axios.get('http://localhost:5000/user/info',{
+          const response=await axios.get('https://b-bbackend.vercel.app/user/info',{
             headers: { Authorization: `Bearer ${accesstoken}` }
           })
           setUser(response.data)

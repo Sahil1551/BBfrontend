@@ -16,7 +16,7 @@ const Login = ({ a }) => {
         email,
         password
       }
-      const response =await axios.post('http://localhost:5000/user/Login',userData);
+      const response =await axios.post('https://b-bbackend.vercel.app/user/Login',userData);
       localStorage.setItem('accesstoken',response.data.accesstoken)
         window.location.href='/'
       
@@ -51,7 +51,7 @@ const Login = ({ a }) => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/user/register', userData);
+      const response = await axios.post('https://b-bbackend.vercel.app/user/register', userData);
       console.log(response);
       alert('Registration successful! Please verify your email to complete the sign-up process.');
       

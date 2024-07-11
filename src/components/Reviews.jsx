@@ -15,7 +15,7 @@ const Reviews = () => {
     if (accessToken) {
       const fetchUser = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/user/info', {
+          const response = await axios.get('https://b-bbackend.vercel.app/user/info', {
             headers: {
               Authorization: `Bearer ${accessToken}`
             }
@@ -32,7 +32,7 @@ const Reviews = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/category');
+        const response = await axios.get('https://b-bbackend.vercel.app/api/category');
         setCategories(response.data);
       } catch (err) {
         console.error(err);
@@ -47,7 +47,7 @@ const Reviews = () => {
         try {
           const selectedCategory = categories.find(cat => cat.category === category);
           if (selectedCategory) {
-            const response = await axios.get(`http://localhost:5000/api/getProduct/${selectedCategory._id}`);
+            const response = await axios.get(`https://b-bbackend.vercel.app/api/getProduct/${selectedCategory._id}`);
             setProducts(response.data);
           }
         } catch (err) {
@@ -66,7 +66,7 @@ const Reviews = () => {
         product:subcategory,
         review
       }
-      await axios.post('http://localhost:5000/api/postReview',Review)
+      await axios.post('https://b-bbackend.vercel.app/api/postReview',Review)
       window.location.href='/'
     }
     catch(err){

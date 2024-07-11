@@ -8,7 +8,7 @@ const Catalog = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get('http://localhost:5000/api/getProduct');
+      const response = await axios.get('https://b-bbackend.vercel.app/api/getProduct');
       console.log(response.data.pr);
       setProducts(response.data.pr);
     };
